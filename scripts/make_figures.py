@@ -369,23 +369,23 @@ def main(args):
     correlations(args.results_path, args.save_path, "mnist_linear")
 
     # IWPC MSE and FIL with output pertubration
-    private_mse_and_fil(args.results_path, args.save_path)
+    # private_mse_and_fil(args.results_path, args.save_path)
 
     # IWPC Fredrikson and whitebox attribute inversion results.
-    private_inversion_accuracy(args.results_path, args.save_path)
+    # private_inversion_accuracy(args.results_path, args.save_path)
 
     # IWPC and UCI Adult attribute inversion results as a function of
     # iterations of IRFIL
-    for dataset in ["iwpc", "uciadult"]:
-        irfil_inversion(args.results_path, dataset, args.save_path)
+    # for dataset in ["iwpc", "uciadult"]:
+    #     irfil_inversion(args.results_path, dataset, args.save_path)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Script to make all the figures.")
-    parser.add_argument("--results_path", type=str, default=".",
+    parser.add_argument("--results_path", type=str, default="../uai2021",
         help="Path of saved results")
-    parser.add_argument("--data_folder", default="/tmp", type=str,
+    parser.add_argument("--data_folder", default="/Users/charlotte/Desktop/study/am207/group/fisher_information_loss/tmp", type=str,
         help="folder in which to store data (default: '/tmp')")
     parser.add_argument("--save_path", default=".", type=str,
         help="folder in which to store figures (default: '.')")
